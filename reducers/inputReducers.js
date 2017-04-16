@@ -1,13 +1,13 @@
 'use strict';
-import { actions } from '../constants';
-import _ from 'lodash';
+const actions  = require('../constants').actions;
+const _ = require('lodash');
 
 const initial = {
   githubHandle: "",
   // formValue: ""
 };
 
-export function inputReducers (state, action) {
+module.exports = function inputReducers (state, action) {
   state = state || initial;
   switch(action.type){
     case actions.SUBMIT_HANDLE:

@@ -1,13 +1,10 @@
 'use strict';
-import {combineReducers} from 'redux';
-import listReducers from './listReducers.js';
-import inputReducers from './inputReducers.js';
-
+const combineReducers = require('redux').combineReducers;
 
 const reducers = {
-  list: listReducers,
+  list: require('./listReducers'),
 
-  input: inputReducers
+  input: require('./inputReducers')
 }
 
-export default combineReducers(reducers);
+module.exports = combineReducers(reducers);

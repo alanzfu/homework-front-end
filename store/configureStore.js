@@ -1,13 +1,11 @@
 'use strict';
+console.log('called from configureStore');
 
-import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
-import reducer from '../reducers';
+const createStore =require('redux').createStore;
+const thunk =require('redux-thunk');
+const reducer =require('../reducers');
 
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-
-export function configureStore(initialState) {
-  console.log('Called');
-  return createStoreWithMiddleware(reducer, initialState);
+module.exports = function configureStore(initialState) {
+  return createStore(reducer, initialState);
 }

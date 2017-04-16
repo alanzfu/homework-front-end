@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 //actions require
 import actions from '../actions';
-// import components from '../components';
+import components from '../components';
 
 
 

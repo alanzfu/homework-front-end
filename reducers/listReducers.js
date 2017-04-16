@@ -1,13 +1,18 @@
 'use strict';
-import { actions, sorts } from '../constants';
-import _ from 'lodash';
+
+const Constants = require('../constants');
+const actions = Constants.actions;
+const sorts = Constants.sorts;
+
+
+const _ = require('lodash');
 
 const initial = {
   repos: [],
   sort: sorts.RECENT
 };
 
-export function listReducers (state, action) {
+module.exports = function (state, action) {
   state = state || initial;
   switch(action.type){
     case actions.GET_REPO_SUCCESS:
