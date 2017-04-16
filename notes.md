@@ -1,6 +1,7 @@
 ## State:
-- githubHandle
-- formValue
+- input
+  - githubHandle
+  - formValue
 - list:
   - repos
   - sort

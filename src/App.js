@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+//actions require
+import actions from '../actions';
+import components from '../components';
+
+
+const contextType = {
+  redux: React.PropTypes.object
+};
+
 class App extends Component {
   render() {
     return (
