@@ -6,12 +6,13 @@ const ListBox = React.createClass({
   render: function() {
     return (
     <div className='list-box'>
-      // <div>
-      //   <p> 'ListBox' </p>
-      // </div>
+      <div>
+        <p> 'ListBox' </p>
+      </div>
     </div>
     )
   }
 });
+
 
 module.exports = ListBox;
