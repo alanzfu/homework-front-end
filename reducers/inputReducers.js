@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 const initial = {
   githubHandle: "",
-  formValue: ""
+  // formValue: ""
 };
 
 export function inputReducers (state, action) {

@@ -7,12 +7,9 @@ import { connect } from 'react-redux';
 
 //actions require
 import actions from '../actions';
-import components from '../components';
+// import components from '../components';
 
 
-const contextType = {
-  redux: React.PropTypes.object
-};
 
 class App extends Component {
   render() {
@@ -30,4 +27,25 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+    // instantiate empty object
+    // keys currently are: user, view, newRace, activeRace
+    let mapping = {};
+
+    for (let k in state){
+      mapping[k] = state[k];
+    }
+
+  return mapping;
+}
+
+function mapDispatchToProps(dispatch) {
+  // console.log("THE MAPPED ACTIONS", actions);
+  let actionsObj = {}
+  for(let key in actions) {
+    actionsObj[key] = bindActionCreators(actions[key], dispatch);
+  }
+  return actionsObj;
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

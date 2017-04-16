@@ -1,6 +1,6 @@
 'use strict';
-const actions = require('../constants').actions;
-const request = require('request');
+import {actions} from '../constants';
+import request from 'request'
 
 
 /*
@@ -19,9 +19,10 @@ const getReposByHandle = payload => {
 
       dispatch({
         type: actions.GET_REPO_SUCCESS,
-        payload: JSON.parse(body);
+        payload: JSON.parse(body)
       });
     });
+  };
 };
 
 const sortRepos = payload => {
@@ -31,8 +32,5 @@ const sortRepos = payload => {
   };
 }
 
-
-module.exports = {
-  getReposByHandle: getReposByHandle,
-  sortRepos: sortRepos
-}
+//Having trouble with export here, went back to module.exports
+export { getReposByHandle, sortRepos }
