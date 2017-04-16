@@ -1,17 +1,15 @@
 const React = require('react');
 
-const InputBox = React.createClass({
-  componentDidUpdate: function () {
-  },
-  render: function() {
-    return (
-    <div className='input-box'>
-      // <div>
-      //   <p> 'InputBox' </p>
-      // </div>
-    </div>
-    )
+class InputBox extends React.createClass {
+  componentDidMount() {
+      console.log("Mounted");
   }
-});
+
+  render() {
+    return (
+      <div className='InputBox'></div>
+    );
+  }
+};
 
 module.exports = InputBox;
