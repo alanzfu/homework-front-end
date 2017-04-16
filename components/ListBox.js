@@ -1,13 +1,13 @@
-const React = require('react');
+const Component = require('react').Component;
 
-class ListBox extends React.Component {
+class ListBox extends Component {
   componentDidMount() {
       console.log("Mounted");
   }
 
   render() {
     return (
-      <div className='ListBox'></div>
+      <div className='listBox'>'ListBox'</div>
     );
   }
 }

@@ -1,13 +1,13 @@
-const React = require('react');
+const Component = require('react').Component;
 
-class InputBox extends React.createClass {
+class InputBox extends Component {
   componentDidMount() {
       console.log("Mounted");
   }
 
   render() {
     return (
-      <div className='InputBox'></div>
+      <div className='inputBox'>'inputBox'</div>
     );
   }
 };
