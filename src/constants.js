@@ -1,0 +1,5 @@
+module.exports = {
+  'SUBMIT_HANDLE': 'SUBMIT_HANDLE',
+  'GET_REPO_SUCCESS': 'GET_REPO_SUCCESS',
+  'GET_REPO_FAIL': 'GET_REPO_FAIL'
+};
